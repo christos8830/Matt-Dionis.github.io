@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">    
 
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
@@ -18,48 +17,67 @@
   </head>
 
   <body ng-app="greekFest">
-    <md-sidenav class="md-sidenav-left" md-is-locked-open="$mdMedia('gt-md')">
-      <md-toolbar class="md-theme-indigo">
+    <div layout="column" layout-fill>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-button aria-label="Menu" ng-init="toolbarToggle = false" ng-click="toolbarToggle = !toolbarToggle">
+            <md-icon md-svg-icon="menu"></md-icon>
+          </md-button>
+          <h2>
+            <span>St Spyridon Grecian Festival 2016</span>
+          </h2>
+        </div>
       </md-toolbar>
-      <md-content>
-        <md-button class="md-primary" hide-gt-md="">
-          Close Sidenav Left
-        </md-button>
-        <p hide-md="" show-gt-md="">
-          This sidenav is locked open on your device. To go back to the default behavior,
-          narrow your display.
-        </p>
-      </md-content>
-    </md-sidenav>
-    <md-toolbar>
-      <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" aria-label="Settings">
-          <md-icon aria-label="Menu" class="material-icons">menu</md-icon>
-        </md-button>
-        <h2>
-          <span>St Spyridon Grecian Festival 2016</span>
-        </h2>
-        <span flex></span>
+      <div layout="row">
+        <md-sidenav md-is-open="toolbarToggle" layout="column" class="md-sidenav-left md-whiteframe-z2">
+          <md-list>
+            <md-list-item>
+              <md-button aria-label="Home" href="/#/home" ng-click="toolbarToggle = !toolbarToggle">
+                <md-icon md-svg-icon="home"></md-icon> Home
+              </md-button>
+            </md-list-item>
+            <md-list-item>
+              <md-button aria-label="Food" href="/#/food" ng-click="toolbarToggle = !toolbarToggle">
+                <md-icon md-svg-icon="silverware-variant"></md-icon> Food
+              </md-button>
+            </md-list-item>
+            <md-list-item>
+              <md-button aria-label="Entertainment" href="/#/entertainment" ng-click="toolbarToggle = !toolbarToggle">
+                <md-icon md-svg-icon="guitar-electric"></md-icon> Entertainment
+              </md-button>
+            </md-list-item>
+            <md-list-item>
+              <md-button aria-label="Sponsorship" href="/#/sponsorship" ng-click="toolbarToggle = !toolbarToggle">
+                <md-icon md-svg-icon="information"></md-icon> Sponsorship
+              </md-button>
+            </md-list-item>
+          </md-list>
+        </md-sidenav>
+        <md-content flex layout-padding>
+          <ng-view></ng-view>
+        </md-content>
       </div>
-    </md-toolbar>
-    <md-content flex layout-padding>
-      <ng-view></ng-view>
-    </md-content>
+    </div>
     <md-fab-speed-dial md-direction="up" class="md-scale md-fab-bottom-right">
       <md-fab-trigger>
         <md-button aria-label="Menu" class="md-fab md-warn">
-          <md-icon class="material-icons">menu</md-icon>
+          <md-icon md-svg-icon="menu"></md-icon>
         </md-button>
       </md-fab-trigger>
       <md-fab-actions>
-        <md-button aria-label="Add to Calendar" class="md-fab md-raised md-mini">
-          <md-icon class="material-icons">event</md-icon>
+        <md-button style="padding-top: 8px;" aria-label="Directions" class="md-fab md-raised md-mini"
+          href="https://goo.gl/maps/FtUaKwsddSk" target="_blank">
+          <md-tooltip md-direction="left">
+            Get directions
+          </md-tooltip>
+          <md-icon md-svg-icon="directions"></md-icon>
         </md-button>
-        <md-button aria-label="Directions" class="md-fab md-raised md-mini">
-          <md-icon class="material-icons">map</md-icon>
-        </md-button>
-        <md-button aria-label="Contact us" class="md-fab md-raised md-mini">
-          <md-icon class="material-icons">mail_outline</md-icon>
+        <md-button style="padding-top: 8px;" aria-label="Facebook link" class="md-fab md-raised md-mini"
+          href="https://www.facebook.com/Saint-Spyridon-Grecian-Festival-718829581470780" target="_blank">
+          <md-tooltip md-direction="left">
+            Like on Facebook
+          </md-tooltip>
+          <md-icon md-svg-icon="facebook-box"></md-icon>
         </md-button>
       </md-fab-actions>
     </md-fab-speed-dial>

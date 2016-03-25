@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('greekFest')
+  .config(function($mdIconProvider, $routeProvider) {
+    $mdIconProvider
+      .defaultIconSet('resources/svg/mdi.svg');
 
-  .config(function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: '/app/home.html'
@@ -13,8 +15,8 @@ angular.module('greekFest')
       .when('/food', {
         templateUrl: '/app/food.html'
       })
-      .when('/resources', {
-        templateUrl: '/app/resources.html'
+      .when('/sponsorship', {
+        templateUrl: '/app/sponsorship.html'
       })
       .otherwise({redirectTo: '/'});
 });
