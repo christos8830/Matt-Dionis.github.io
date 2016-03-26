@@ -18,7 +18,7 @@
 
   <body ng-app="greekFest">
     <div layout="column" layout-fill>
-      <md-toolbar>
+      <md-toolbar style="background-color: #538DC8;">
         <div class="md-toolbar-tools">
           <md-button aria-label="Menu" ng-init="toolbarToggle = false" ng-click="toolbarToggle = !toolbarToggle">
             <md-icon md-svg-icon="menu"></md-icon>
@@ -32,23 +32,23 @@
         <md-sidenav md-is-open="toolbarToggle" layout="column" class="md-sidenav-left md-whiteframe-z2">
           <md-list>
             <md-list-item>
-              <md-button aria-label="Home" href="/#/home" ng-click="toolbarToggle = !toolbarToggle">
-                <md-icon md-svg-icon="home"></md-icon> Home
+              <md-button style="color: #538DC8;" aria-label="Home" href="/#/home" ng-click="toolbarToggle = !toolbarToggle">
+                <md-icon md-svg-icon="home" style="color: #538DC8;"></md-icon> Home
               </md-button>
             </md-list-item>
             <md-list-item>
-              <md-button aria-label="Food" href="/#/food" ng-click="toolbarToggle = !toolbarToggle">
-                <md-icon md-svg-icon="silverware-variant"></md-icon> Food
+              <md-button style="color: 4ACAA0;" aria-label="Food" href="/#/food" ng-click="toolbarToggle = !toolbarToggle">
+                <md-icon md-svg-icon="silverware-variant" style="color: 4ACAA0;"></md-icon> Food
               </md-button>
             </md-list-item>
             <md-list-item>
-              <md-button aria-label="Entertainment" href="/#/entertainment" ng-click="toolbarToggle = !toolbarToggle">
-                <md-icon md-svg-icon="guitar-electric"></md-icon> Entertainment
+              <md-button style="color: #F99B0E;" aria-label="Entertainment" href="/#/entertainment" ng-click="toolbarToggle = !toolbarToggle">
+                <md-icon md-svg-icon="guitar-electric" style="color: #F99B0E;"></md-icon> Entertainment
               </md-button>
             </md-list-item>
             <md-list-item>
-              <md-button aria-label="Sponsorship" href="/#/sponsorship" ng-click="toolbarToggle = !toolbarToggle">
-                <md-icon md-svg-icon="information"></md-icon> Sponsorship
+              <md-button style="color: #665ECF;" aria-label="Sponsorship" href="/#/sponsorship" ng-click="toolbarToggle = !toolbarToggle">
+                <md-icon md-svg-icon="information" style="color: #665ECF;"></md-icon> Sponsorship
               </md-button>
             </md-list-item>
           </md-list>
@@ -60,7 +60,7 @@
     </div>
     <md-fab-speed-dial md-direction="up" class="md-scale md-fab-bottom-right">
       <md-fab-trigger>
-        <md-button aria-label="Menu" class="md-fab md-warn">
+        <md-button aria-label="Menu" class="md-fab md-primary">
           <md-icon md-svg-icon="menu"></md-icon>
         </md-button>
       </md-fab-trigger>
@@ -70,14 +70,14 @@
           <md-tooltip md-direction="left">
             Get directions
           </md-tooltip>
-          <md-icon md-svg-icon="directions"></md-icon>
+          <md-icon md-svg-icon="directions" style="color: 679EF8;"></md-icon>
         </md-button>
         <md-button style="padding-top: 8px;" aria-label="Facebook link" class="md-fab md-raised md-mini"
           href="https://www.facebook.com/Saint-Spyridon-Grecian-Festival-718829581470780" target="_blank">
           <md-tooltip md-direction="left">
             Like on Facebook
           </md-tooltip>
-          <md-icon md-svg-icon="facebook-box"></md-icon>
+          <md-icon md-svg-icon="facebook-box" style="color: #3b5998;"></md-icon>
         </md-button>
       </md-fab-actions>
     </md-fab-speed-dial>
