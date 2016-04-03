@@ -1246,6 +1246,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
     #main-nav .nav a:active,
     #main-nav .nav a:hover{
         font-size:16px;
+        text-shadow: none;
     }
 
     #main-nav li{
@@ -1331,6 +1332,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
         line-height: 42px;
         text-align: center;
         color: #6d6d6d;
+        text-shadow: none;
     }
 
     #main-nav .nav li.active a,
@@ -1342,6 +1344,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
         padding-top: 5px;
         font-size: 21px;
         color:#6d6d6d;
+        text-shadow: none;
     }
     
     #main-nav .navbar-brand img{
