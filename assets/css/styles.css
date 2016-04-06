@@ -570,12 +570,12 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
     overflow:hidden;
 }
 
-#projects-container {
+#food-container, #entertainment-container {
     margin:0 auto;
     visibility: hidden;
 }
 
-#projects-container .project-item{
+#food-container .project-item, #entertainment-container .project-item {
     display:block;
     position:relative;
     margin:0;
@@ -592,7 +592,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 	-webkit-backface-visibility: hidden;
 }
 
-#projects-container .project-item.filtered{
+#food-container .project-item.filtered, #entertainment-container .project-item.filtered {
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
@@ -1018,7 +1018,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
         font-size: 42px;
     }
     
-    #projects-container .project-item{
+    #food-container .project-item, #entertainment-container .project-item {
         width:320px;
         margin-bottom: 20px;
     }
@@ -1178,7 +1178,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 
 @media (max-width:479px){
     
-    #projects-container .project-item{
+    #food-container .project-item, #entertainment-container .project-item {
         width:300px;
         margin-bottom: 15px;
     }
